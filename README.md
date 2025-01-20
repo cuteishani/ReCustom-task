@@ -61,7 +61,12 @@ This repository contains the implementation of a **User Metrics Dashboard** buil
    ```bash
    npm install
    ```
-3. Start the React development server:
+3. Configure environment variables:
+   Create a `.env` file in the `frontend` directory with the following:
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:3000
+   ```
+4. Start the React development server:
    ```bash
    npm run dev
    ```
