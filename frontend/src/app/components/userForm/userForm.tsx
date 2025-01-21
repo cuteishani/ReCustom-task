@@ -28,6 +28,7 @@ const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
           <div>
             <label className="block font-bold">Name</label>
             <Field
+              data-testid="name"
               name="name"
               className="w-full border px-2 py-1"
               placeholder="Enter name"
@@ -43,6 +44,7 @@ const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
             <Field
               name="email"
               type="email"
+              data-testid="email"
               className="w-full border px-2 py-1"
               placeholder="Enter email"
             />
@@ -54,7 +56,12 @@ const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
           </div>
           <div>
             <label className="block font-bold">Role</label>
-            <Field name="role" as="select" className="w-full border px-2 py-1">
+            <Field
+              name="role"
+              as="select"
+              className="w-full border px-2 py-1"
+              data-testid="role"
+            >
               <option value="">Select Role</option>
               <option value="Admin">Admin</option>
               <option value="User">User</option>
@@ -66,6 +73,7 @@ const UserForm: React.FC<UserFormProps> = ({ initialData, onSubmit }) => {
             />
           </div>
           <button
+            data-testid="submit"
             type="submit"
             disabled={isSubmitting}
             className="bg-green-500 text-white px-4 py-2 rounded"
